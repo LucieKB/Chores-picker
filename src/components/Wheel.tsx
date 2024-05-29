@@ -30,8 +30,7 @@ export const Wheel = () => {
   const segments = chores
     .map(({ name, pond }) => Array(pond).fill(name))
     .flat();
-
-  //    const winner = segments[(Math.floor(Math.random() * segments.length))]
+  console.log(segments);
 
   return (
     <div>
@@ -59,10 +58,9 @@ export const Wheel = () => {
       </div>
       <div>
         <button
-          onClick={
-            // setWinner(segments[Math.floor(Math.random() * segments.length)]);
-            console.log("coucou")
-          }
+          onClick={() => {
+            setWinner(segments[Math.floor(Math.random() * segments.length)]);
+          }}
         >
           Select Winner
         </button>
